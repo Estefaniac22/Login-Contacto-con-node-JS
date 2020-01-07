@@ -6,7 +6,9 @@
 
         var misFs = require('./public/misfunciones');
         var mongoose = require('mongoose');
-        mongoose.connect('mongodb://localhost/ContactosAlberdi',{ useNewUrlParser: true })
+        mongoose.connect('mongodb://localhost/ContactosAlberdi',{ 
+            useUnifiedTopology: true,
+            useNewUrlParser: true })
 
         var db = mongoose.connection;
         db.once('open', function(){
