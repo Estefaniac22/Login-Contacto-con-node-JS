@@ -36,7 +36,7 @@
         var server  = app.listen(7070,function(){
             var host = server.address().address;
             var port = server.address().port;
-            console.log("Example app listening at htpp://%s:%s",host, port)
+            console.log("Example app listening at htpp://%s:%s",host, port, "/Index.html")
         });
 
         app.use(express.static(__dirname + "/public"));
@@ -48,15 +48,10 @@
 
         });
         /* ----------permitimos a express acceder a nuestro archivo (Contacto.html)--------------------- */
-        app.get('/Contacto.html', function(req, res) {
-
-                res.sendFile(__dirname + "/" + "Contacto.html");
-                console.log(__dirname + "/" + "Contacto.html")
-
-            });
-        app.get('/Login.html', function(req,res){
-                res.sendFile(__dirname + "/Login.hrml");
-                console.log(__dirname + "/Login.html")
+       
+        app.get('/Index.html', function(req,res){
+                res.sendFile(__dirname + "/Index.hrml");
+                console.log(__dirname + "/Index.html")
 
         });
         app.get('/accionesLogin.html', function(req, res) {
@@ -65,7 +60,12 @@
                 res.sendFile(__dirname + "/accionesLogin.html");
 
         });
+        app.get('/Contacto.html', function(req, res) {
 
+                res.sendFile(__dirname + "/" + "Contacto.html");
+                console.log(__dirname + "/" + "Contacto.html")
+
+            });
 
 
            app.post('/carga',function(req,res,next){
@@ -89,7 +89,7 @@
                         console.log("<-- OK --[ BBDD ]");
                     };
                 });
-                console.log("<--( <a index.html>) --[ server ]");
+                console.log("<--( <a Index.html>) --[ server ]");
 
                 res.send("<h2><center>Datos cargados exitosamente</center></h1><a href='/Contacto.html' ><center>Volver</center></a>");
 
@@ -111,8 +111,8 @@
                                console.log("<-- OK --[ BBDD ]");
                                 };
                              });
-                             console.log("<--( <a index.html>) --[ server ]");
-                             res.send("<h2><center>Usted se há logueado exitosamente!</center></h1><a href='/Login.html'><center>Volver</center></a>");
+                             console.log("<--( <a Index.html>) --[ server ]");
+                             res.send("<h2><center>Usted se há logueado exitosamente!</center></h1><a href='/Index.html'><center>Volver</center></a>");
 
                    });
 
