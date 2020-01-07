@@ -1,0 +1,248 @@
+/**atributos de los headers**/
+#header, #header2{
+  background: #333;
+  font: oblique bold 120% cursive;
+}
+/**tipos de letras**/
+#Letra{
+  font: oblique bold 120% cursive;
+  font-size: 230%;
+
+}
+#Letra2{
+  font: oblique bold 120% cursive;
+  font-size: 130%;
+}
+/**atributos del map**/
+#mapa{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/**letras del color de bienvenida**/
+#Bienvenida, #Bienvenida2{
+  color:#ddd;
+}
+
+
+/* El side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    
+}
+ 
+/* El link del menu de navegacion */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+ 
+/* Cuando pasas el mouse por los links del menu cambian de color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+ 
+/* Posicion y estilo del boton para cerrar el menu */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+ 
+/* Estilo de la pagina de contenido - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 0px;/*Estaba en 20. Lo puse en 0 para que el carrusel ocupara toda la pantalla*/
+    overflow:hidden;
+    width:100%;
+}
+body {
+  overflow-x: hidden;
+  background-color: rgba(220, 244, 247)
+}
+ 
+/* Agrega fondo negro a la parte de arriba del menu */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+ 
+/* Da estilo a los link dentro del nav */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+ 
+/* Cambia el color de los links en hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+ 
+/* Agrega color a los links activos */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+ 
+/* En pantallas mas pequeñas, donde el alto es menor a 450px, cambia el estilo de sidenav(menos padding y un menor font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+ 
+a svg{
+  transition:all .5s ease;
+ 
+  &:hover{
+    #transform:rotate(180deg);
+  }
+}
+ 
+#ico{
+  display: none;
+}
+ 
+.menu{
+  background: #000;
+  display: none;
+  padding: 5px;
+  width: 320px;
+  @include border-radius(5px);
+ 
+  #transition: all 0.5s ease;
+ 
+  a{
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 10px 2px;
+    margin: 3px 0;
+    text-decoration: none;
+    background: #444;
+ 
+    &:nth-child(1){
+      margin-top: 0;
+      @include border-radius(3px 3px 0 0 );
+    }
+    &:nth-child(5){
+      margin-bottom: 0;
+      @include border-radius(0 0 3px 3px);
+    }
+ 
+    &:hover{
+      background: #555;
+    }
+  }
+}
+
+/*Mis estilos*/
+    .img-txt{
+      width: 300px;
+      height: 200px;
+    }
+    .imagenes-miniatura{
+      width: 300px;
+      height: 300px;
+      /*Estos dos son para centrar la imagen del div*/
+      display:block;
+      margin:auto;
+    }
+    .estilosProductos{
+      padding-top: 30px;
+    }
+    .estilosProductoIndividual{
+      background-color: rgba(230, 228, 228, 0.582);
+    }
+    
+    .efectoCard{
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.25s;
+    }
+    .efectoCard:hover{
+    transform: translateY(-15px);
+    box-shadow: 0px 3px 20px -2px rgba(117,117,117,1);
+    }
+    /**fondo**/
+    #bodyDulces, #bodyConservas, #bodyMermeladas{
+      background-color: rgb(247, 243, 193);
+    }
+    #bodySobre{
+      background-color: rgb(247, 243, 193);
+
+    }
+   footer{
+    background: #333;
+
+   }
+/*-------------estilo del formulario.-------------*/
+
+#contieneForm{
+display: flex;
+width: 100%;
+height: 100vh; /*toma el 100% de la pantalla*/
+justify-content: center;
+align-items: center;
+}
+form{
+
+    display:flex;
+flex-flow: column;
+background-color: white;
+width: 100%;
+height: 60%;
+padding: 20px; /*margen interno*/
+justify-content: center;
+align-items: center;
+box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+border-radius: 22px;
+}
+input, textarea{
+    border: none;
+    resize: none;
+    outline: none;
+    padding: 10px 0px;
+    width:70%;
+    margin:20px;
+    transition: all 300ms;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+
+
+}
+input: focus, textarea:focus{
+    border-bottom-color: #610061;
+}
+button {
+    border: none;
+    outline:none;
+    padding: 15px;
+    width: 200px;
+    color:white;
+    border-radius: 2px;}
+    background-color: black;
+
+}

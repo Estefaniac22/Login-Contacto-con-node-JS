@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Catálogo de Escuela Alberdi</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<header>
+    <div id="header" class="container-fluid">
+        <br>
+        <div class="row justify-content-center">
+            <h2 class="text-light">CONTACTO</h2>
+        </div>
+
+    </div>
+
+</header>
+
+
+<!--Menu lateral-->
+<div class="row">
+    <!--Menu-->
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div id="sideNavigation" class="sidenav">
+
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Menu &times;</a>
+            <a href="Contacto.html">>Contacto</a>
+            <a href="Login.html">>Iniciar Sesión</a>
+        </div>
+
+        <nav class="topnav">
+            <a href="#" onclick="openNav()">
+                <svg width="30" height="30" id="icoOpen">
+                    <path d="M0,5 30,5" stroke="#000" stroke-width="5" />
+                    <path d="M0,14 30,14" stroke="#000" stroke-width="5" />
+                    <path d="M0,23 30,23" stroke="#000" stroke-width="5" />
+                </svg>
+            </a>
+        </nav>
+    </div>
+    <div id="main">
+
+        <div class="row">
+            <div class="container" id="contieneForm">
+                <div class="col-xs-12">
+                    <br>
+                    <h1>Iniciar Sesión</h1>
+
+                    <br>
+
+                    <div class="row"  >
+                        <div class="container">
+                            <div class="col-xs-12">
+                                <fieldset>
+                                    <form action="http://localhost:7070/cargaLogin" method="POST">
+                                        <input type="text" name="usuario" placeholder="User">
+                                        <input type="text" name="contraseña" placeholder="Password">
+                                              <button class="btn-primary">Registrarse</button>
+                                    </form>
+                                </fieldset>
+                                <p><a href="/accionesLogin.html">Ya tienes una cuenta? Iniciar sesión</a></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <br>
+        <br>
+        <!-- Footer -->
+        <footer class="page-footer font-small pt-4">
+            <div class="text-light">
+                <div class="footer-copyright text-center py-3">© 2019 Copyright.All rights reserved.
+
+                </div>
+            </div>
+
+        </footer>
+
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+</body>
+
